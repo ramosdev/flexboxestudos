@@ -24,6 +24,7 @@ div img{
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
 
 header{
@@ -69,7 +70,7 @@ header .menu {
     margin-bottom: 10px;
 }
 
-.texto-apresentacao a{
+.btn{
     background-color: #122A57;
     color: #fff;
     text-align: center;
@@ -87,6 +88,11 @@ header .menu {
 #quem-somos {
     align-items: center;
     justify-content: space-between;
+}
+
+#quem-somos img{
+    min-width: 320px;
+    margin: auto;
 }
 
 #quem-somos h2{
@@ -171,8 +177,161 @@ header .menu {
 #planos {
     flex-direction: column;
     min-height: 100vh;
+    padding-top:50px;
 }
 
-.card-planos {
+#planos h2 {
+    font-size:32px;
+
+}
+
+.list-planos {
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.card-planos{
+    flex: 1;
+    border: 5px solid #122A57;
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 240px;
+
+}
+
+.card-planos .btn {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card-planos h3 {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-planos h3::after {
+    content: "";
+    width:90%;
+    background-color: #122A57;
+    height:3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card-planos ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.card-planos ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.card-planos ul li::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #122A57;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #122A57;
+    height:70px;
+    display:flex;
+    align-items: center;
+
+}
+
+footer .footer {
+    justify-content: space-between;
+    
+    flex-direction: row;
+    
+}
+
+footer .footer p{
+    color: #fff;
+}
+
+@media(max-width:992px){
+
+    .flex-container{
+        flex-direction: column;
+        align-items:center;
+    }
+    .apresentacao {
+        flex-direction:column-reverse;
+    }
+
+    .texto-apresentacao{
+        width: 100%;
+        text-align: center;
+    }
+
+    .texto-apresentacao a {
+        align-items:center;
+    }
+
+    #quem-somos {
+        flex-direction: column-reverse;
+    }
+
+    .list-servicos {
+        flex-direction: column;
+    }
+
+    .card-servicos img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-planos .card-planos {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header {
+        text-align: center;
+        align-items:center;
+    }
+
+    header .list-items{
+        align-items: center;
+    }
+
+    .texto-apresentacao a{
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    #quem-somos {
+        margin-top: 40px;
+        width: 50%;
+    }
+
+    #quem-somos h2{
+        display:bl
+    }
+
+    footer .footer {
+        flex-direction: column;
+    }
 }
